@@ -1,0 +1,8 @@
+version: "3.2"
+
+services:
+  qmk:
+    build: .
+    image: qmk_firmware
+    volumes:
+      - ${PWD}:/qmk_firmware
