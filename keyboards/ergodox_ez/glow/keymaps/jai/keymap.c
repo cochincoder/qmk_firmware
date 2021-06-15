@@ -1,4 +1,4 @@
-#include QMK_KEYBOARD_H
+include QMK_KEYBOARD_H
 #include "version.h"
 #include "keymap_german.h"
 #include "keymap_nordic.h"
@@ -53,8 +53,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
     KC_GRAVE,       KC_Q,           KC_W,           KC_F,           KC_P,           KC_B,           KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_J,           KC_L,           KC_U,           KC_Y,           KC_QUOTE,       KC_PIPE,
     KC_TRANSPARENT, KC_A,           KC_R,           KC_S,           KC_T,           KC_G,                                                                           KC_M,           KC_N,           KC_E,           KC_I,           KC_O,           KC_MINUS,
-    LCTL(KC_SPACE), LSFT_T(KC_Z),   LCTL_T(KC_X),   LALT_T(KC_C),   LGUI_T(KC_D),   LT(2,KC_V),     TG(7),                                          KC_TRANSPARENT, KC_K,           RGUI_T(KC_H),   RALT_T(KC_COMMA),RCTL_T(KC_DOT), RSFT_T(KC_SLASH),KC_SCOLON,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, LT(6,KC_ESCAPE),LT(1,KC_TAB),                                                                                                   LT(4,KC_BSPACE),LT(5,KC_DELETE),KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+    LCTL(KC_SPACE), LSFT_T(KC_Z),   LCTL_T(KC_X),   LALT_T(KC_C),   LGUI_T(KC_D),   LT(6,KC_V),     TG(7),                                          KC_TRANSPARENT, KC_K,           RGUI_T(KC_H),   RALT_T(KC_COMMA),RCTL_T(KC_DOT), RSFT_T(KC_SLASH),KC_SCOLON,
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, LT(2,KC_ESCAPE),LT(1,KC_TAB),                                                                                                   LT(4,KC_BSPACE),LT(5,KC_DELETE),KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                                     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                                                     KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                     KC_SPACE,       KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, LT(3,KC_ENTER)
