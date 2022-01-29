@@ -23,7 +23,7 @@ func main() {
 	rows := [3]string{"U", "H", "L"}
 	// pinky, ring, middle, index, index_2
 	cols := [5]string{"P", "R", "M", "I", "2"}
-	thumb_keys := [4]string{"KC_TAB", "KC_SPC", "KC_ENT", "KC_BSPC"}
+	thumb_keys := [4]string{"KC_TAB", "KC_SPC", "KC_RSFT", "KC_BSPC"}
 
 	key_list := []string{}
 
@@ -47,7 +47,11 @@ func main() {
 	}
 
 	for i, code := range thumb_keys {
-		alias := fmt.Sprintf("%s_%s%v", sections[i/(len(thumb_keys)/2)], "T", i%(len(thumb_keys)/2))
+    size := len(thumb_keys)
+		alias := fmt.Sprintf("%s_%s%v", sections[i/(size/2)], "T", i/2-i%(size/2))
+    if i < size/2 {
+      alias = fmt.Sprintf("%s_%s%v", sections[i/(size/2)], "T", i%(size/2))
+    }
 		fmt.Println("#define", alias, code)
 		key_list = append(key_list, alias)
 	}
