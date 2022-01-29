@@ -1,0 +1,5 @@
+//     name           result    chord  keys
+COMB(  L_UR_UM_ESC,   KC_ESC,   L_UR,  L_UM  )
+COMB(  R_UR_UM_SCLN,  KC_SCLN,  R_UR,  R_UM  )
+COMB(  R_UI_UM_SCLN,  KC_COLN,  R_UI,  R_UM  )
+COMB(  L_HP_HR_TAB,   KC_TAB,   L_HP,  L_HR  )

@@ -1,0 +1,6 @@
+{
+  "KC_ESC":  ["L_UR", "L_UM"],
+  "KC_SCLN": ["R_UR", "R_UM"],
+  "KC_COLN": ["R_UI", "R_UM"],
+  "KC_TAB":  ["L_HP", "L_HR"]
+}
