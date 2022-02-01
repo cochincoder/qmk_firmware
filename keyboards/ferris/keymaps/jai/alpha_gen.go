@@ -93,7 +93,7 @@ func combos() {
 	combo_list["KC_PIPE"] = []string{"R_HM", "R_LM"} //  |
 	combo_list["KC_Q"] = []string{"L_HP", "L_LP"}    //  q
 	combo_list["KC_CAPS"] = []string{"L_U2", "R_U2"} //  capslock
-	// combo_list["KC_SCLN"] = []string{"R_HP", "R_LP"} //  ;
+	combo_list["LALT(KC_BSPC)"] = []string{"R_UI", "R_UM", "R_UR"} //  ;
 
 	output := []string{"// name result chord_keys\n"}
 	for k, c := range combo_list {
