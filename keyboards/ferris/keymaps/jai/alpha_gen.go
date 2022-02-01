@@ -86,8 +86,8 @@ func combos() {
 	combo_list["KC_DQUO"] = []string{"R_UM", "R_U2"} //  "
 	combo_list["KC_SCLN"] = []string{"R_LI", "R_L2"} //  ;
 	combo_list["KC_COLN"] = []string{"R_LM", "R_L2"} //  :
-	combo_list["KC_GRV"] = []string{"L_LI", "L_L2"}  //  `
-	combo_list["KC_TILD"] = []string{"L_LM", "L_L2"} //  ~
+	combo_list["KC_GRV"] = []string{"L_UI", "L_U2"}  //  `
+	combo_list["KC_TILD"] = []string{"L_UM", "L_U2"} //  ~
 	combo_list["KC_BSLS"] = []string{"R_LR", "R_HM"} //  \
 	combo_list["KC_SLSH"] = []string{"R_LI", "R_HM"} //  /
 	combo_list["KC_PIPE"] = []string{"R_HM", "R_LM"} //  |

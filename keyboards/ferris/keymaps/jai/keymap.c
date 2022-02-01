@@ -40,7 +40,7 @@
 #define L_T0 OSL(1)
 #define L_T1 KC_SPC
 #define R_T1 OSM(MOD_RSFT)
-#define R_T0 OSL(1)
+#define R_T0 OSL(2)
 
 #include "g/keymap_combo.h"
 
@@ -54,7 +54,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[1] = LAYOUT(
                  _______, _______, KC_UP,   _______, _______,     _______,    KC_7,   KC_8,   KC_9, _______,
                  _______, KC_LEFT, KC_DOWN, KC_RGHT, _______,     _______,    KC_4,   KC_5,   KC_6, _______,
-OSM(MOD_LCTL), OSM(MOD_LALT), OSM(MOD_LGUI), KC_COMM, KC_DOT,      KC_QUES,    KC_1,   KC_2,   KC_3, _______,
+OSM(MOD_LCTL), OSM(MOD_LALT), OSM(MOD_LGUI),KC_DOT,  KC_COMM,      KC_QUES,   KC_1,   KC_2,   KC_3, _______,
+                                            _______, _______,     _______,    KC_0
+      ),
+	[2] = LAYOUT(
+                 _______, _______, KC_UP,   _______, _______,     _______,    KC_AMPR,   KC_ASTR,   KC_LPRN, _______,
+                 _______, KC_LEFT, KC_DOWN, KC_RGHT, _______,     _______,    KC_DLR,    KC_PERC,   KC_CIRC, _______,
+OSM(MOD_LCTL), OSM(MOD_LALT), OSM(MOD_LGUI),KC_COMM, KC_DOT,      KC_QUES,   KC_EXLM,   KC_AT,     KC_HASH, _______,
                                             _______, _______,     _______,    KC_0
       )
 };
