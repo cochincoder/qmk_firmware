@@ -69,7 +69,7 @@ func combos() {
 	combo_list["KC_TAB"] = []string{"L_UR", "L_UM"}                //  tab
 	combo_list["KC_BSPC"] = []string{"R_UR", "R_UM"}               //  delete
 	combo_list["KC_ESC"] = []string{"L_HR", "L_HM"}                //  esc
-	combo_list["KC_ENT"] = []string{"R_HM", "R_HR"}                //  return
+	combo_list["KC_ENT"] = []string{"R_HI", "R_HM", "R_HR"}        //  return
 	combo_list["KC_LCBR"] = []string{"L_UM", "L_UI"}               //  {
 	combo_list["KC_RCBR"] = []string{"R_UM", "R_UI"}               //  }
 	combo_list["KC_LBRC"] = []string{"L_HM", "L_HI"}               //  [
