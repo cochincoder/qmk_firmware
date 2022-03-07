@@ -7,12 +7,12 @@
  * edit it directly.
  */
 
-#define L_UP KC_Q
+#define L_UP KC_Z
 #define L_UR KC_W
 #define L_UM KC_F
 #define L_UI KC_P
-#define L_U2 KC_B
-#define R_U2 KC_J
+#define L_U2 KC_COMM
+#define R_U2 KC_DOT
 #define R_UI KC_L
 #define R_UM KC_U
 #define R_UR KC_Y
@@ -27,7 +27,7 @@
 #define R_HM KC_E
 #define R_HR KC_I
 #define R_HP KC_O
-#define L_LP KC_Z
+#define L_LP KC_Q
 #define L_LR KC_X
 #define L_LM KC_C
 #define L_LI KC_D
@@ -52,14 +52,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                             L_T0, L_T1,     R_T1, R_T0
       ),
 	[1] = LAYOUT(
-                 _______, _______, KC_UP,   _______, _______,     _______,    KC_7,   KC_8,   KC_9, _______,
-           OSM(MOD_LSFT), KC_LEFT, KC_DOWN, KC_RGHT, KC_COMM,      KC_DOT,    KC_4,   KC_5,   KC_6, _______,
+                 _______, _______, KC_UP,   _______, KC_COMM,      KC_DOT,    KC_7,   KC_8,   KC_9, _______,
+           OSM(MOD_LSFT), KC_LEFT, KC_DOWN, KC_RGHT, _______,     _______,    KC_4,   KC_5,   KC_6, _______,
 OSM(MOD_LCTL), OSM(MOD_LALT), OSM(MOD_LGUI),_______, _______,        KC_0,    KC_1,   KC_2,   KC_3, _______,
                                             _______, _______,     _______,    _______
       ),
 	[2] = LAYOUT(
-                 _______, _______, KC_UP,   _______, _______,     _______,    KC_AMPR,   KC_ASTR,   KC_LPRN,_______,
-           OSM(MOD_LSFT), KC_LEFT, KC_DOWN, KC_RGHT, KC_COMM,      KC_DOT,    KC_DLR,    KC_PERC,   KC_CIRC,_______,
+                 _______, _______, KC_UP,   _______, KC_COMM,      KC_DOT,    KC_AMPR,   KC_ASTR,   KC_LPRN,_______,
+           OSM(MOD_LSFT), KC_LEFT, KC_DOWN, KC_RGHT, _______,     _______,    KC_DLR,    KC_PERC,   KC_CIRC,_______,
 OSM(MOD_LCTL), OSM(MOD_LALT), OSM(MOD_LGUI),_______, _______,     KC_QUES,    KC_EXLM,   KC_AT,     KC_HASH,  _______,
                                             _______, _______,     _______,    _______
       )

@@ -8,7 +8,7 @@ import "io/ioutil"
 
 func main() {
 	kb_chars := [3]string{
-		"qwfpbjluy;",
+		"qwfp,.luy;",
 		"arstgmneio",
 		"zxcdvkh,./",
 	}
@@ -91,7 +91,9 @@ func combos() {
 	combo_list["KC_BSLS"] = []string{"R_HR", "R_UM"}               //  \
 	combo_list["KC_SLSH"] = []string{"R_HI", "R_UM"}               //  /
 	combo_list["KC_PIPE"] = []string{"R_HM", "R_UM"}               //  |
-	combo_list["KC_Q"] = []string{"L_HP", "L_LP"}                  //  q
+	combo_list["KC_Z"] = []string{"L_HP", "L_LP"}                  //  z
+	combo_list["KC_B"] = []string{"L_HI2", "L_LI2"}                //  b
+	combo_list["KC_J"] = []string{"R_HI2", "R_LI2"}                //  j
 	combo_list["KC_DOT"] = []string{"R_HP", "R_LP"}                //  .
 	combo_list["KC_CAPS"] = []string{"L_U2", "R_U2"}               //  capslock
 	combo_list["LALT(KC_BSPC)"] = []string{"R_UI", "R_UM", "R_UR"} //  alt + bksp
