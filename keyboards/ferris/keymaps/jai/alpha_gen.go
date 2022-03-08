@@ -8,7 +8,7 @@ import "io/ioutil"
 
 func main() {
 	kb_chars := [3]string{
-		"qwfp,.luy;",
+		"qwfpbjluy;",
 		"arstgmneio",
 		"zxcdvkh,./",
 	}
@@ -66,14 +66,17 @@ func main() {
 func combos() {
 	combo_list := make(map[string][]string)
 
-	combo_list["KC_TAB"] = []string{"L_HR", "L_HM"}                //  tab
+	combo_list["KC_Q"] = []string{"L_HP", "L_LP"}                  //  q
+	combo_list["KC_TAB"] = []string{"L_LR", "L_LM"}                //  tab
+	combo_list["2_KC_TAB"] = []string{"L_UR", "L_UM"}              //  tab
 	combo_list["KC_BSPC"] = []string{"R_UR", "R_UM"}               //  delete
-	combo_list["KC_ESC"] = []string{"L_LR", "L_LM"}                //  esc
+	combo_list["KC_ESC"] = []string{"L_HR", "L_HM"}                //  esc
 	combo_list["KC_ENT"] = []string{"R_HI", "R_HM", "R_HR"}        //  return
+	combo_list["2_KC_ENT"] = []string{"L_HI", "L_HM", "L_HR"}      //  return
 	combo_list["KC_LCBR"] = []string{"L_UM", "L_UI"}               //  {
 	combo_list["KC_RCBR"] = []string{"R_UM", "R_UI"}               //  }
 	combo_list["KC_LBRC"] = []string{"L_HM", "L_HI"}               //  [
-	combo_list["KC_LT"] = []string{"L_HP", "L_HR"}                 // <
+	combo_list["KC_LT"] = []string{"L_HP", "L_HR"}                 //  <
 	combo_list["KC_RBRC"] = []string{"R_HM", "R_HI"}               //  ]
 	combo_list["KC_LPRN"] = []string{"L_LM", "L_LI"}               //  (
 	combo_list["KC_RPRN"] = []string{"R_LM", "R_LI"}               //  )
@@ -91,16 +94,15 @@ func combos() {
 	combo_list["KC_BSLS"] = []string{"R_HR", "R_UM"}               //  \
 	combo_list["KC_SLSH"] = []string{"R_HI", "R_UM"}               //  /
 	combo_list["KC_PIPE"] = []string{"R_HM", "R_UM"}               //  |
-	combo_list["KC_Z"] = []string{"L_HP", "L_LP"}                  //  z
-	combo_list["KC_B"] = []string{"L_HI2", "L_LI2"}                //  b
-	combo_list["KC_J"] = []string{"R_HI2", "R_LI2"}                //  j
-	combo_list["KC_DOT"] = []string{"R_HP", "R_LP"}                //  .
+	combo_list["KC_COMM"] = []string{"L_H2", "L_L2"}               //  ,
+	combo_list["KC_DOT"] = []string{"R_H2", "R_L2"}                //  .
 	combo_list["KC_CAPS"] = []string{"L_U2", "R_U2"}               //  capslock
 	combo_list["LALT(KC_BSPC)"] = []string{"R_UI", "R_UM", "R_UR"} //  alt + bksp
 
 	output := []string{"// name result chord_keys\n"}
 	for k, c := range combo_list {
 		sort.Strings(c)
+		k = strings.TrimPrefix(k, "2_")
 		output = append(output, fmt.Sprintf("COMB( %s, %-10s, %s )\n", strings.Join(c, "_"), k, strings.Join(c, ", ")))
 	}
 	sort.Strings(output)
