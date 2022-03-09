@@ -67,11 +67,11 @@ func combos() {
 	combo_list := make(map[string][]string)
 
 	combo_list["KC_Q"] = []string{"L_HP", "L_LP"}   //  q
-	combo_list["KC_TAB"] = []string{"L_LR", "L_LM"} //  tab
+	combo_list["KC_TAB"] = []string{"L_HR", "L_HM"} //  tab
 	// combo_list["2_KC_TAB"] = []string{"L_UR", "L_UM"}              //  tab
 	combo_list["2_KC_Q"] = []string{"L_UR", "L_UM"}                //  q
 	combo_list["KC_BSPC"] = []string{"R_UR", "R_UM"}               //  delete
-	combo_list["KC_ESC"] = []string{"L_HR", "L_HM"}                //  esc
+	combo_list["KC_ESC"] = []string{"L_LR", "L_LM"}                //  esc
 	combo_list["KC_ENT"] = []string{"R_HI", "R_HM", "R_HR"}        //  return
 	combo_list["2_KC_ENT"] = []string{"L_HI", "L_HM", "L_HR"}      //  return
 	combo_list["KC_LCBR"] = []string{"L_UM", "L_UI"}               //  {
@@ -95,8 +95,8 @@ func combos() {
 	combo_list["KC_BSLS"] = []string{"R_HR", "R_UM"}               //  \
 	combo_list["KC_SLSH"] = []string{"R_HI", "R_UM"}               //  /
 	combo_list["KC_PIPE"] = []string{"R_HM", "R_UM"}               //  |
-	combo_list["KC_COMM"] = []string{"L_H2", "L_U2"}               //  ,
-	combo_list["KC_DOT"] = []string{"R_H2", "R_U2"}                //  .
+	combo_list["KC_COMM"] = []string{"L_HI", "L_UI"}               //  ,
+	combo_list["KC_DOT"] = []string{"R_HI", "R_UI"}                //  .
 	combo_list["KC_CAPS"] = []string{"L_U2", "R_U2"}               //  capslock
 	combo_list["LALT(KC_BSPC)"] = []string{"R_UI", "R_UM", "R_UR"} //  alt + bksp
 
