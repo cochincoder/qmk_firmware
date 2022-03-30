@@ -26,7 +26,7 @@ func main() {
 	rows := [3]string{"U", "H", "L"}
 	// pinky, ring, middle, index, index_2
 	cols := [5]string{"P", "R", "M", "I", "2"}
-	thumb_keys := [4]string{"KC_TAB", "KC_SPC", "KC_RSFT", "KC_BSPC"}
+	thumb_keys := [4]string{"KC_TAB", "KC_SPC", "RSFT_T(KC_ENT)", "KC_BSPC"}
 
 	key_list := []string{}
 

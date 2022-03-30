@@ -39,7 +39,7 @@
 #define R_LP OSM(MOD_RCTL)
 #define L_T0 OSL(1)
 #define L_T1 KC_SPC
-#define R_T1 OSM(MOD_RSFT)
+#define R_T1 RSFT_T(KC_ENT)
 #define R_T0 OSL(2)
 
 #include "g/keymap_combo.h"
