@@ -64,47 +64,46 @@ func main() {
 }
 
 func combos() {
-	combo_list := make(map[string][]string)
+	combo_list := make(map[string]string)
 
-	combo_list["KC_Q"] = []string{"L_HP", "L_LP"}   //  q
-	combo_list["KC_TAB"] = []string{"L_HR", "L_HM"} //  tab
-	// combo_list["2_KC_TAB"] = []string{"L_UR", "L_UM"}              //  tab
-	combo_list["2_KC_Q"] = []string{"L_UR", "L_UM"}                //  q
-	combo_list["KC_BSPC"] = []string{"R_UR", "R_UM"}               //  delete
-	combo_list["KC_ESC"] = []string{"L_LR", "L_LM"}                //  esc
-	combo_list["KC_ENT"] = []string{"R_HI", "R_HM", "R_HR"}        //  return
-	combo_list["2_KC_ENT"] = []string{"L_HI", "L_HM", "L_HR"}      //  return
-	combo_list["KC_LCBR"] = []string{"L_UM", "L_UI"}               //  {
-	combo_list["KC_RCBR"] = []string{"R_UM", "R_UI"}               //  }
-	combo_list["KC_LBRC"] = []string{"L_HM", "L_HI"}               //  [
-	combo_list["KC_LT"] = []string{"L_HP", "L_HR"}                 //  <
-	combo_list["KC_RBRC"] = []string{"R_HM", "R_HI"}               //  ]
-	combo_list["KC_LPRN"] = []string{"L_LM", "L_LI"}               //  (
-	combo_list["KC_RPRN"] = []string{"R_LM", "R_LI"}               //  )
-	combo_list["KC_GT"] = []string{"R_HP", "R_HR"}                 //  >
-	combo_list["KC_EQL"] = []string{"L_HI", "L_H2"}                //  =
-	combo_list["KC_PLUS"] = []string{"L_HM", "L_H2"}               //  +
-	combo_list["KC_MINS"] = []string{"R_HI", "R_H2"}               //  -
-	combo_list["KC_UNDS"] = []string{"R_HM", "R_H2"}               //  _
-	combo_list["KC_QUOT"] = []string{"R_UI", "R_U2"}               //  '
-	combo_list["KC_DQUO"] = []string{"R_UM", "R_U2"}               //  "
-	combo_list["KC_SCLN"] = []string{"R_LI", "R_L2"}               //  ;
-	combo_list["KC_COLN"] = []string{"R_LM", "R_L2"}               //  :
-	combo_list["KC_GRV"] = []string{"L_UI", "L_U2"}                //  `
-	combo_list["KC_TILD"] = []string{"L_UM", "L_U2"}               //  ~
-	combo_list["KC_BSLS"] = []string{"R_HR", "R_UM"}               //  \
-	combo_list["KC_SLSH"] = []string{"R_HI", "R_UM"}               //  /
-	combo_list["KC_PIPE"] = []string{"R_HM", "R_UM"}               //  |
-	combo_list["KC_COMM"] = []string{"L_HI", "L_UI"}               //  ,
-	combo_list["KC_DOT"] = []string{"R_HI", "R_UI"}                //  .
-	combo_list["KC_CAPS"] = []string{"L_U2", "R_U2"}               //  capslock
-	combo_list["LALT(KC_BSPC)"] = []string{"R_UI", "R_UM", "R_UR"} //  alt + bksp
+	combo_list["L_HR+L_HM"] = "KC_TAB"             //  tab
+	combo_list["L_UR+L_UM"] = "KC_Q"             //  q
+	combo_list["R_UR+R_UM"] = "KC_BSPC"            //  delete
+	combo_list["L_LR+L_LM"] = "KC_ESC"             //  esc
+	combo_list["R_HI+R_HM+R_HR"] = "KC_ENT"        //  return
+	combo_list["L_HI+L_HM+L_HR"] = "2_KC_ENT"      //  return
+	combo_list["L_UM+L_UI"] = "KC_LCBR"            //  {
+	combo_list["R_UM+R_UI"] = "KC_RCBR"            //  }
+	combo_list["L_HM+L_HI"] = "KC_LBRC"            //  [
+	combo_list["L_HP+L_HR"] = "KC_LT"              //  <
+	combo_list["R_HM+R_HI"] = "KC_RBRC"            //  ]
+	combo_list["L_LM+L_LI"] = "KC_LPRN"            //  (
+	combo_list["R_LM+R_LI"] = "KC_RPRN"            //  )
+	combo_list["R_HP+R_HR"] = "KC_GT"              //  >
+	combo_list["L_HI+L_H2"] = "KC_EQL"             //  =
+	combo_list["L_HM+L_H2"] = "KC_PLUS"            //  +
+	combo_list["R_HI+R_H2"] = "KC_MINS"            //  -
+	combo_list["R_HM+R_H2"] = "KC_UNDS"            //  _
+	combo_list["R_UI+R_U2"] = "KC_QUOT"            //  '
+	combo_list["R_UM+R_U2"] = "KC_DQUO"            //  "
+	combo_list["R_LI+R_L2"] = "KC_SCLN"            //  ;
+	combo_list["R_LM+R_L2"] = "KC_COLN"            //  :
+	combo_list["L_UI+L_U2"] = "KC_GRV"             //  `
+	combo_list["L_UM+L_U2"] = "KC_TILD"            //  ~
+	combo_list["R_HR+R_UM"] = "KC_BSLS"            //  \
+	combo_list["R_HI+R_UM"] = "KC_SLSH"            //  /
+	combo_list["R_HM+R_UM"] = "KC_PIPE"            //  |
+	combo_list["L_HI+L_UI"] = "KC_COMM"            //  ,
+	combo_list["R_HI+R_UI"] = "KC_DOT"             //  .
+	combo_list["L_U2+R_U2"] = "KC_CAPS"            //  capslock
+	combo_list["R_UI+R_UM+R_UR"] = "LALT(KC_BSPC)" //  alt + bksp
 
 	output := []string{"// name result chord_keys\n"}
-	for k, c := range combo_list {
-		sort.Strings(c)
+	for c, k := range combo_list {
+		keys := strings.Split(c, "+")
+		sort.Strings(keys)
 		k = strings.TrimPrefix(k, "2_")
-		output = append(output, fmt.Sprintf("COMB( %s, %-10s, %s )\n", strings.Join(c, "_"), k, strings.Join(c, ", ")))
+		output = append(output, fmt.Sprintf("COMB( %s, %-10s, %s )\n", strings.Join(keys, "_"), k, strings.Join(keys, ", ")))
 	}
 	sort.Strings(output)
 	ioutil.WriteFile(os.Args[1], []byte(strings.Join(output, "")), 0555)
