@@ -107,10 +107,11 @@ func combos(outDir string) {
 	combo_list["R_HR+R_UM"] = "KC_BSLS"            //  \
 	combo_list["R_HI+R_UM"] = "KC_SLSH"            //  /
 	combo_list["R_HM+R_UM"] = "KC_PIPE"            //  |
-	combo_list["R_HI+R_UI"] = "KC_SCLN"            //  ;
-	combo_list["R_HI+R_LI"] = "KC_COLN"            //  :
+	combo_list["L_H2+L_L2"] = "KC_SCLN"            //  ;
+	combo_list["R_H2+R_L2"] = "KC_COLN"            //  :
 	combo_list["L_U2+R_U2"] = "KC_CAPS"            //  capslock
 	combo_list["R_UI+R_UM+R_UR"] = "LALT(KC_BSPC)" //  alt + bksp
+	combo_list["R_HI+R_UI"] = "KC_ENT"             // return
 	combo_list["R_HP+R_LP"] = "KC_ENT"             // return
 	combo_list["L_HP+L_LP"] = "KC_ENT"             // return
 	//	combo_list["R_HI+R_HM+R_HR"] = "KC_ENT"        //  return
