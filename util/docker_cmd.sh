@@ -37,7 +37,7 @@ fi
 
 # IF we are using docker on non Linux and docker-machine isn't working print an error
 # ELSE set usb_args
-if [ ! "$(uname)" = "Linux" ] && [ "$RUNTIME" = "docker" ] && ! docker-machine active >/dev/null 2>&1; then
+if [ "$(uname)" = "Linux" ] && [ "$RUNTIME" = "docker" ] && ! docker-machine active >/dev/null 2>&1; then
 	errcho "Error: target requires docker-machine to work on your platform"
 	errcho "See http://gw.tnode.com/docker/docker-machine-with-usb-support-on-windows-macos"
 	exit 3
