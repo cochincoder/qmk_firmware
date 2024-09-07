@@ -15,8 +15,8 @@
     },
     "diode_direction": "COL2ROW",
     "matrix_pins": {
-        "cols": ["GP3", "GP4", "GP5", "GP6", "GP7"],
-        "rows": ["GP9", "GP10", "GP11", "GP12"]
+        "rows": ["GP3", "GP4", "GP5", "GP6"],
+        "cols": ["GP9", "GP10", "GP11", "GP12", "GP13"]
     },
     "layout_aliases": {
         "LAYOUT": "LAYOUT_split_3x5_2"
